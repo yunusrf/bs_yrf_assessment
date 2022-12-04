@@ -4,7 +4,7 @@ Please find the information on the exercises attempted below.
 
 ### Exercise 1: Machine Learning Application - Multifidelity Climate Modelling
 
-- Due to time restrictions and research into potential solutions, this assignment is only partially completed. Please see the notebook 'Machine_Learning_Climate_Modelling_Assessment.ipynb'
+- Due to time restrictions and research into potential solutions, this assignment is only partially completed. Please see the notebook ['Machine_Learning_Climate_Modelling_Assessment.ipynb'](https://github.com/yunusrf/bs_yrf_assessment/blob/main/Machine_Learning_Climate_Modelling_Assessment.ipynb)
  
 ##### Possible Approach
 
@@ -21,7 +21,7 @@ Emukit and GPy are two programs that can be used to implement the models. Sciki
 
 a. Automatically downloads GFS data from the NOMADS Grib filter service for both resolutions of the GFS gridded data sets, for any desired cycle and only at the given area-of-interest. Provide the cycle information as a script argument.
 
--  The service to get the grib files (wind, pressure, and temperature) from the nomads NOAA site is implemented by the script ['grib data downloader.py'] (https://github.com/yunusrf/bs_yrf_assessment/blob/main/grib_data_downloader.py) . This script is invoked from a wrapper script ['download_app.py'](https://github.com/yunusrf/bs_yrf_assessment/blob/main/download_app.py).   The files are downloaded to folder **/grib/(wind,pressure,tmpr)**
+-  The service to get the grib files (wind, pressure, and temperature) from the nomads NOAA site is implemented by the script ['grib_data_downloader.py'](https://github.com/yunusrf/bs_yrf_assessment/blob/main/grib_data_downloader.py) . This script is invoked from a wrapper script ['download_app.py'](https://github.com/yunusrf/bs_yrf_assessment/blob/main/download_app.py).   The files are downloaded to folder ['**/grib/(wind,pressure,tmpr)**'](https://github.com/yunusrf/bs_yrf_assessment/tree/main/grib/res-0.25)
 -  Based on the specified resolution and amount of detail, this script downloads the GRIB data.
 	For exmaple: level of detail p25 for the 0.25 Degree resolution, p50 for 0.50 Degree and p1 --> 1 Degree
 	- Sample command:  python download_app.py -l "p25" 
@@ -58,7 +58,7 @@ c. Comment on which data set you think is more suitable for operational usage, c
 
 1. How well do the distributions of wind speed, temperature and rainfall from the CFSRv2 data compare with the distributions of the observations at Queenstown and Auckland airports for 2018?
 		My comments:
-	- Jupyter notebook "analysis_cfsrv2_data.ipynb" has the code for analysis of the CFSRv2 data at Queenstown and Auckland Airports ( Supplied csv files)
+	- Jupyter notebook ['analysis_cfsrv2_data.ipynb'](https://github.com/yunusrf/bs_yrf_assessment/blob/main/analysis_cfsrv2_data.ipynb) has the code for analysis of the CFSRv2 data at Queenstown and Auckland Airports ( Supplied csv files)
 	- Exploratory Data Analysis in addition to Data Cleaning for the two datasets separately (Auckland Airport and Queenstown Airport)
 	 - Plotting the overall data and analysis of specific year 2018 data
 	 - Plotting the data to see behavior in different seasons 
@@ -84,7 +84,7 @@ Outline the process you would take to improve the CFSRv2 wind speed data at Quee
 
 Can you write some code to solve this problem and discuss the complexity of your solution?
 
-- The script 'exercise_4.py'  implements the code to  display top-k numbers that appear more frequently in a given list of N real numbers
+- The script ['exercise_4.py'](https://github.com/yunusrf/bs_yrf_assessment/blob/main/exercise_4.py)  implements the code to  display top-k numbers that appear more frequently in a given list of N real numbers
 - The script execute output of two samples lists given. Run the script using the command : 'python exercise_4.py'
 	Sample Output:
 		Input Array  to get top 3 - [9, 4, 2, 1, 1, 3, 8, 4, 2, 9, 2]
