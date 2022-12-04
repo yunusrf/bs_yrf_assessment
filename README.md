@@ -21,7 +21,7 @@ Emukit and GPy are two programs that can be used to implement the models. Sciki
 
 a. Automatically downloads GFS data from the NOMADS Grib filter service for both resolutions of the GFS gridded data sets, for any desired cycle and only at the given area-of-interest. Provide the cycle information as a script argument.
 
--  The service to get the grib files (wind, pressure, and temperature) from the nomads NOAA site is implemented by the script "grib data downloader.py. This script is invoked from a wrapper script 'download_app.py'.   The files are downloaded to folder **/grib/(wind,pressure,tmpr)**
+-  The service to get the grib files (wind, pressure, and temperature) from the nomads NOAA site is implemented by the script "grib data downloader.py" [https://github.com/yunusrf/bs_yrf_assessment/blob/main/grib_data_downloader.py] . This script is invoked from a wrapper script 'download_app.py'[].   The files are downloaded to folder **/grib/(wind,pressure,tmpr)**
 -  Based on the specified resolution and amount of detail, this script downloads the GRIB data.
 	For exmaple: level of detail p25 for the 0.25 Degree resolution, p50 for 0.50 Degree and p1 --> 1 Degree
 	- Sample command:  python download_app.py -l "p25" 
