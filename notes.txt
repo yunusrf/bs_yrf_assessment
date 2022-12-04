@@ -1,0 +1,37 @@
+The idea of big-O notation as the number of operation to be carried (or number of bytes to be stored, etc), e.g. if you have a loop for(int i=0;i<n;++i) then there are n operations so the time complexity is O(n). 
+ While this is a nice first intuition, I think that it can be misleading as big-O notation defines a higher asymptotic bound. 
+
+ ---
+ Data Download
+
+ URL=
+https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl?file=gfs.t00z.pgrb2.0p25.anl&all_lev=on&all_var=on&leftlon=161&rightlon=180&toplat=51&bottomlat=31&dir=%2Fgfs.20221202%2F00%2Fatmos
+
+Filename does not match legal pattern: gfs.t..z.pgrb2.0p25.(f...|anl)$
+
+g2sub 1.1.0.beta-6 and comments: Wesley.Ebisuzaki@noaa.gov, Jun.Wang@noaa.gov
+
+
+---
+
+grib_ls -P time ./grib/res-0.25/pressure/20221202/6/gfs.f003.grb2 
+
+time         edition      centre       date         dataType     gridType     stepRange    typeOfLevel  level        shortName    packingType  
+600          2            kwbc         20221202     fc           regular_ll   3            surface      0            t            grid_complex_spatial_differencing 
+1 of 1 messages in ./grib/res-0.25/pressure/20221202/6/gfs.f003.grb2
+
+
+grib_get_data -w time=1200 ./grib/res-0.25/pressure/20221202/6/gfs.f003.grb2 > temp.csv
+
+
+URL with UI for temperature : resolution 0.5 Degree
+URL=
+https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p50.pl?file=gfs.t00z.pgrb2full.0p50.f000&lev_surface=on&var_TMP=on&leftlon=0&rightlon=360&toplat=90&bottomlat=-90&dir=%2Fgfs.20221203%2F00%2Fatmos
+g2sub 1.1.0.beta-6 and comments: Wesley.Ebisuzaki@noaa.gov, Jun.Wang@noaa.gov
+
+
+
+URL for Test area of interest - 161°E to 180°E and 51°S to 31°S.
+
+URL=
+https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p50.pl?file=gfs.t00z.pgrb2full.0p50.f000&lev_surface=on&var_TMP=on&subregion=&leftlon=161&rightlon=180&toplat=51&bottomlat=31&dir=%2Fgfs.20221203%2F00%2Fatmos
